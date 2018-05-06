@@ -9,6 +9,9 @@
         position: relative;
         .row-flex();
         justify-content: space-between;
+        .xs-block( {
+            justify-content: center;
+        });
         &:before {
             position: absolute;
             z-index: 1;
@@ -17,8 +20,24 @@
             height: 16px;
             background-color: @main-strip-color;
         }
+        &:after {
+            position: absolute;
+            bottom: -16px;
+            z-index: 1;
+            width: 100%;
+            content: "";
+            height: 16px;
+            background-color: @main-strip-color;
+        }
+        
     }
     &__title, &__avatar {
+        .col();
+        .size(10);
+        .size-md(10);
+        .size-xs(20);
+        
+        text-align: center;
         margin: 0 2em;
         padding: 0 0.5em;
         z-index: 2;
@@ -30,7 +49,29 @@
         font-weight: bold;
     }
     &__avatar {
+        .xs-block({
+            max-width: none;
+            text-align: end;
+            
+        });
+        img {
+            .xs-block({
+                width: 30%;
+            });
+        }
         max-width: 120px;
         max-height: 120px;
+    }
+    &__text {
+        margin-left: 0.5em;
+        font-size: 2em;
+        font-weight: bold;
+        position: absolute;
+        top: 2em;
+        z-index: 3;
+        .xs-block({
+            font-size: 1em;
+            top: 4em;
+        });
     }
 }
