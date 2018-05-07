@@ -1,0 +1,37 @@
+@import  "var.less";
+@import "fonts.less";
+@import "header.less";
+@import "content.less"; 
+@import "footer.less"; 
+@import  "smart-grid.less";
+
+
+.reset(); 
+body {
+	font-family: Bariol;
+}
+a {
+	cursor:pointer;
+	text-decoration: none;
+}
+#go-top {
+	width:40px;
+	height:40px;
+	opacity:0.3;
+	position: absolute;;
+	bottom: 1em;
+    right: 3em;
+	display:none;
+	text-indent:-9999px;
+	background: url('../images/icon_top.png') no-repeat;
+	.xs-block({
+		right: 1em;
+	});
+	.md-block({
+		right:2em;
+	});
+	
+  }
+// .debug{
+//     .debug(rgba(0, 0, 0, 0.5), 1px solid #ff0);
+// }
