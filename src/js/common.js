@@ -17,3 +17,7 @@
   $(function() {
    $("#go-top").scrollToTop();
   });
+  $(".entry__header,.experience__header").on('click', function() {
+    $(this).siblings("div").toggle("slow");
+  });
+  
